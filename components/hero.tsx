@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-start justify-center overflow-hidden pt-8 pb-4 sm:pt-12 sm:pb-6 px-4"
+      className="relative flex items-center justify-center overflow-hidden pt-2 pb-4 sm:pt-4 sm:pb-6 px-4"
     >
       {/* Subtle background shapes with gentle floating animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -26,8 +26,8 @@ export function Hero() {
           }`}
         >
           The{" "}
-          <span className="text-[#0071ce] font-semibold">Walmart Method</span>{" "}
-          That&apos;s Changing Everything
+          <span className="text-[#0071ce] font-semibold">Walmart Discounts</span>{" "}
+          They Don&apos;t Advertise
         </h1>
 
         {/* Subheadline */}
@@ -36,7 +36,7 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Discover how people are saving big on everyday essentials, tech, home items, and more.
+          Discover how shoppers are unlocking hidden discount codes on tech, home goods, and everyday finds
         </p>
 
         {/* CTA Button */}
@@ -49,7 +49,7 @@ export function Hero() {
             href="https://trksy.org/aff_c?offer_id=3004&aff_id=26188"
             target="_blank"
             rel="noopener noreferrer"
-            className="touch-button group inline-flex items-center gap-3 bg-[#0071ce] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#005ba1] transition-all duration-300 hover:shadow-xl hover:shadow-[#0071ce]/20 hover:-translate-y-0.5"
+            className="touch-button group inline-flex items-center gap-3 bg-[#0071ce] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#005ba3] transition-all duration-300 hover:shadow-xl hover:shadow-[#0071ce]/20 hover:-translate-y-0.5"
           >
             APPLY NOW
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -81,8 +81,8 @@ export function Hero() {
             />
           </div>
           <p className="text-sm text-muted-foreground/70 font-medium">
-            <span className="sm:hidden">Join 12,000+ shoppers who&apos;ve<br />already claimed their rewards.</span>
-            <span className="hidden sm:inline">Join 12,000+ shoppers who&apos;ve already claimed their rewards.</span>
+            <span className="sm:hidden">Join 12,000+ shoppers who&apos;ve<br />already claimed their discounts</span>
+            <span className="hidden sm:inline">Join 12,000+ shoppers who&apos;ve already claimed their discounts</span>
           </p>
         </div>
       </div>

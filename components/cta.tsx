@@ -61,7 +61,7 @@ export function CTA() {
               }`}
               style={{ transitionDelay: sectionVisible ? "400ms" : "0ms" }}
             >
-              Join thousands of shoppers who have already claimed their $750 gift card. Your savings are just a few clicks away.
+              Join thousands of shoppers who have already claimed their summer discount code. Your savings are just a few clicks away.
             </p>
             
             <div

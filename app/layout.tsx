@@ -10,8 +10,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Walmart Method",
-  description: "Discover how people are unlocking up to $750 in Walmart rewards. Complete simple steps and claim your gift card today.",
+  title: "Walmart Discounts They Don't Advertise",
+  description:
+    "Discover how shoppers are unlocking hidden discount codes on tech, home goods, and everyday finds. Complete simple steps and claim your discount code today.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -25,26 +26,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Walmart Method",
-    description: "Unlock up to $750 in Walmart rewards with a simple process.",
-    siteName: "Walmart Method",
+    title: "Walmart Discounts They Don't Advertise",
+    description: "Unlock hidden discount codes on tech, home goods, and everyday finds with a simple process.",
+    siteName: "Walmart Discounts",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6859811db8c0679449725597_new-Walmart-logo-01-q4bSMtQp8YRVUjJtK8NQAs5C3ye3n8.png",
-        width: 1000,
-        height: 1000,
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "Walmart Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Walmart Method",
-    description: "Unlock up to $750 in Walmart rewards with a simple process.",
-    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6859811db8c0679449725597_new-Walmart-logo-01-q4bSMtQp8YRVUjJtK8NQAs5C3ye3n8.png"],
+    title: "Walmart Discounts They Don't Advertise",
+    description: "Unlock hidden discount codes on tech, home goods, and everyday finds with a simple process.",
+    images: ["/og-image.png"],
   },
   other: {
-    "apple-mobile-web-app-title": "Walmart Method",
+    "apple-mobile-web-app-title": "Walmart Discounts",
   },
 }
 

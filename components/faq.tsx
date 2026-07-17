@@ -21,7 +21,7 @@ const faqs = [
     icon: CheckCircle,
     question: "How many do I need?",
     answer:
-      "Complete 5+ deals to receive your reward. The more deals you complete, the faster you can receive your gift card.",
+      "Complete 5+ deals to receive your reward. The more deals you complete, the faster you can receive your discount code.",
   },
 ];
 
@@ -71,15 +71,15 @@ export function FAQ() {
                 onClick={() => toggleAccordion(index)}
                 className="touch-expand w-full flex items-center gap-4 p-6 text-left cursor-pointer group rounded-2xl"
               >
-                <div className="touch-icon flex-shrink-0 w-12 h-12 bg-muted rounded-xl flex items-center justify-center group-hover:bg-[#0071ce]/10 transition-colors duration-200">
-                  <faq.icon className="w-6 h-6 text-foreground/70 group-hover:text-[#0071ce] transition-colors duration-200" strokeWidth={1.5} />
+                <div className="touch-icon flex-shrink-0 w-12 h-12 bg-muted rounded-xl flex items-center justify-center group-hover:bg-accent transition-colors duration-200">
+                  <faq.icon className="w-6 h-6 text-foreground/70" strokeWidth={1.5} />
                 </div>
                 <span className="flex-1 font-semibold text-foreground text-lg">
                   {faq.question}
                 </span>
-                <div className="touch-icon flex-shrink-0 w-10 h-10 bg-muted rounded-full flex items-center justify-center group-hover:bg-[#0071ce]/10 transition-colors duration-200">
+                <div className="touch-icon flex-shrink-0 w-10 h-10 bg-muted rounded-full flex items-center justify-center group-hover:bg-accent transition-colors duration-200">
                   <ChevronDown
-                    className={`w-5 h-5 text-foreground/70 group-hover:text-[#0071ce] transition-all duration-300 ease-out ${
+                    className={`w-5 h-5 text-foreground/70 transition-transform duration-300 ease-out ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                     strokeWidth={1.5}

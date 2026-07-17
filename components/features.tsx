@@ -1,36 +1,36 @@
 "use client";
 
-import { ShoppingCart, Smartphone, Home, Package, Tv, Sofa, Sparkles, Headphones } from "lucide-react";
+import { Smartphone, Home, TrendingUp, Backpack, Tv, Sofa, Sparkles, ShoppingCart } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const features = [
   {
-    icon: ShoppingCart,
-    secondaryIcon: Package,
-    title: "Everyday Essentials",
-    description:
-      "Stock up on groceries, household items, and daily necessities.",
-  },
-  {
     icon: Smartphone,
-    secondaryIcon: Headphones,
+    secondaryIcon: Tv,
     title: "Tech & Electronics",
     description:
-      "Shop tablets, headphones, smart devices, and more.",
+      "Use your discount code on popular devices like tablets, headphones, and smart home tech.",
   },
   {
     icon: Home,
     secondaryIcon: Sofa,
-    title: "Home & Living",
+    title: "Home Essentials",
     description:
-      "Upgrade your space with furniture, decor, and home essentials.",
+      "Save on decor, furniture, and everyday essentials to upgrade your space for summer.",
   },
   {
-    icon: Package,
+    icon: TrendingUp,
     secondaryIcon: Sparkles,
-    title: "Accessories & More",
+    title: "Trending Finds",
     description:
-      "Browse accessories, add-ons, and must-have everyday items.",
+      "Apply your code to viral products, summer seasonal items, and exclusive deals.",
+  },
+  {
+    icon: Backpack,
+    secondaryIcon: ShoppingCart,
+    title: "Back to School Shopping",
+    description:
+      "Stock up on backpacks, school supplies, and everything students need for the new school year.",
   },
 ];
 
@@ -49,7 +49,7 @@ export function Features() {
             Unlock Rewards
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground mt-3 max-w-2xl mx-auto text-balance">
-            What You Can Do With Your $750 Gift Card
+            What You Can Do With Your Summer Discount Code
           </h2>
         </div>
 
@@ -66,7 +66,7 @@ export function Features() {
                 transitionDuration: "600ms, 600ms, 500ms, 500ms",
               }}
             >
-              {/* Icon composition area - consistent soft blue tint for all cards */}
+              {/* Icon composition area - consistent soft red tint for all cards */}
               <div className="relative h-48 bg-[#0071ce]/[0.06] overflow-hidden">
                 {/* Main icon with subtle float */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -75,7 +75,7 @@ export function Features() {
                   </div>
                 </div>
                 
-                {/* Secondary decorative icons with floating - all blue */}
+                {/* Secondary decorative icons with floating - all red */}
                 <div className="absolute top-6 right-8 animate-float" style={{ animationDelay: "0.5s" }}>
                   <div className="w-10 h-10 bg-[#0071ce]/10 rounded-xl flex items-center justify-center rotate-12">
                     <feature.secondaryIcon className="w-5 h-5 text-[#0071ce]" strokeWidth={1.5} />
@@ -87,7 +87,7 @@ export function Features() {
                   </div>
                 </div>
                 
-                {/* Decorative circles - subtle blue tint */}
+                {/* Decorative circles - subtle red tint */}
                 <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-[#0071ce]/[0.08] rounded-full" />
                 <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#0071ce]/[0.05] rounded-full" />
               </div>

@@ -26,7 +26,7 @@ const steps = [
   },
   {
     icon: Trophy,
-    title: "Receive your $750 gift card",
+    title: "Receive your discount code",
     description: "Delivered straight to your inbox",
   },
 ];
@@ -48,7 +48,7 @@ export function Steps() {
             How It Works
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground mt-3 text-balance">
-            Five Simple Steps to Rewards
+            Five Simple Steps to Claiming Your Discount Code
           </h2>
         </div>
 
@@ -83,8 +83,8 @@ export function Steps() {
                   </div>
                   
                   <div className="flex-1 min-w-0">
-                    <div className="touch-icon w-12 h-12 bg-muted rounded-xl flex items-center justify-center mb-3 group-hover:bg-[#0071ce]/10 transition-colors duration-300">
-                      <step.icon className="w-6 h-6 text-foreground/70 group-hover:text-[#0071ce] transition-colors duration-300" strokeWidth={1.5} />
+                    <div className="touch-icon w-12 h-12 bg-muted rounded-xl flex items-center justify-center mb-3 group-hover:bg-accent transition-colors duration-300">
+                      <step.icon className="w-6 h-6 text-foreground/70" strokeWidth={1.5} />
                     </div>
                     
                     <h3 className="font-semibold text-foreground mb-1.5">{step.title}</h3>

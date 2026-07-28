@@ -1,52 +1,86 @@
-import type { Metadata } from "next"
-import { Poppins } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const poppins = Poppins({ 
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
 })
 
+const SITE_URL = "https://www.walmartdiscounts.com"
+const SITE_NAME = "Walmart Discounts"
+const TITLE = "The Walmart Discounts They Don't Advertise"
+const DESCRIPTION =
+  "Discover how shoppers are unlocking hidden discount codes on groceries, tech, home essentials, and everyday finds. Complete 5+ deals in five simple steps and get your discount delivered straight to your inbox."
+
 export const metadata: Metadata = {
-  title: "Walmart Discounts They Don't Advertise",
-  description:
-    "Discover how shoppers are unlocking hidden discount codes on tech, home goods, and everyday finds. Complete simple steps and claim your discount code today.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/favicon-512x512.png", sizes: "512x512", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: [
+    "Walmart discount code",
+    "Walmart promo code",
+    "Walmart discounts",
+    "Walmart deals",
+    "Walmart rewards program",
+    "grocery and essentials deals",
+    "tech and electronics deals",
+    "home and kitchen deals",
+    "toys and games deals",
+  ],
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "shopping",
+  alternates: {
+    canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  generator: "v0.app",
   openGraph: {
     type: "website",
-    title: "Walmart Discounts They Don't Advertise",
-    description: "Unlock hidden discount codes on tech, home goods, and everyday finds with a simple process.",
-    siteName: "Walmart Discounts",
+    url: SITE_URL,
+    title: TITLE,
+    description: DESCRIPTION,
+    siteName: SITE_NAME,
+    locale: "en_US",
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Walmart Logo",
+        width: 1024,
+        height: 1024,
+        alt: "A grocery bag of produce and snacks, a tablet, earbuds, an air fryer, a bedding set, toy building blocks, and a board game floating on a blue background",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Walmart Discounts They Don't Advertise",
-    description: "Unlock hidden discount codes on tech, home goods, and everyday finds with a simple process.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/og-image.png"],
   },
   other: {
-    "apple-mobile-web-app-title": "Walmart Discounts",
+    "apple-mobile-web-app-title": SITE_NAME,
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#0071CE",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -55,8 +89,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} font-sans antialiased`}>
+    <html lang="en" className="bg-white">
+      <body className={`${inter.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

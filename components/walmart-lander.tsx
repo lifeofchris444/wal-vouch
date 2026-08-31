@@ -3,11 +3,12 @@
 import { useState } from "react"
 import Image from "next/image"
 
-const AFFILIATE_LINK = "https://trksy.org/aff_c?offer_id=1157&aff_id=26188"
+const AFFILIATE_LINK = "https://trksy.org/aff_c?offer_id=1405&aff_id=26188"
 
 const BLUE = "#0071CE"
-const BLUE_DEEP = "#003C87"
-const BLUE_BRIGHT = "#2A8CE8"
+const BLUE_DEEP = "#004C8C"
+const BLUE_BRIGHT = "#2E9BE6"
+const YELLOW = "#FFC220"
 const INK = "#111213"
 
 const STEPS = [
@@ -37,23 +38,23 @@ const STEPS = [
 const CATEGORIES = [
   {
     t: "Groceries & Essentials",
-    d: "Weekly hauls, snacks, and household staples.",
-    icon: "M4 6h2l2.4 10.5a1 1 0 001 .8h8.6a1 1 0 001-.8L21 9H7 M9 21a1 1 0 100-2 1 1 0 000 2z M17 21a1 1 0 100-2 1 1 0 000 2z",
+    d: "Pantry staples, fresh produce, and household basics.",
+    icon: "M5 9h14l-1.5 11h-11L5 9z M9 9V6a3 3 0 016 0v3 M10 13v4 M14 13v4",
   },
   {
     t: "Tech & Electronics",
-    d: "Earbuds, soundbars, and tablets.",
-    icon: "M7 3h10a1 1 0 011 1v16a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z M11 18h2",
+    d: "TVs, tablets, headphones, and smart devices.",
+    icon: "M3 5h18v11H3z M8 20h8 M12 16v4",
   },
   {
     t: "Home & Kitchen",
-    d: "Air fryers, bedding sets, and cookware.",
-    icon: "M4 11l8-7 8 7 M6 9.5V20h12V9.5",
+    d: "Cookware, bedding, storage, and small appliances.",
+    icon: "M3 11l9-7 9 7 M5 10v10h14V10 M10 20v-6h4v6",
   },
   {
     t: "Toys & Games",
-    d: "Building sets, board games, and action figures.",
-    icon: "M4 8a4 4 0 014-4h8a4 4 0 014 4v8a4 4 0 01-4 4H8a4 4 0 01-4-4V8z M8 10v4 M6 12h4 M15 10h.01 M17 13h.01",
+    d: "Building sets, board games, and outdoor play.",
+    icon: "M6 9h12a4 4 0 010 8H6a4 4 0 010-8z M9 13h2 M10 12v2 M16 12h.01 M17.5 14h.01",
   },
 ]
 
@@ -75,7 +76,7 @@ const FAQS = [
 const AVATARS = [
   { src: "/avatars/avatar-1.png", alt: "Shopper with blonde hair in a grey sweater" },
   { src: "/avatars/avatar-2.png", alt: "Shopper with auburn hair in an olive shirt" },
-  { src: "/avatars/avatar-3.png", alt: "Shopper with dark hair in a white t-shirt" },
+  { src: "/avatars/avatar-3-v2.png", alt: "Shopper with dark curly hair in a light blue t-shirt" },
 ]
 
 function Icon({ d, className = "w-6 h-6", color = BLUE }: { d: string; className?: string; color?: string }) {
@@ -141,7 +142,7 @@ function TimelineRow({ step, index }: { step: (typeof STEPS)[number]; index: num
         className={`hidden md:flex items-center ${leftSide ? "md:order-3 justify-start" : "md:order-1 justify-end"}`}
         aria-hidden="true"
       >
-        <span className="font-black text-6xl lg:text-7xl leading-none select-none" style={{ color: "#E8F1FA" }}>
+        <span className="font-black text-6xl lg:text-7xl leading-none select-none" style={{ color: "#E8F3FD" }}>
           0{index + 1}
         </span>
       </div>
@@ -168,7 +169,7 @@ function TimelineRow({ step, index }: { step: (typeof STEPS)[number]; index: num
         <div className={`flex items-start gap-4 ${leftSide ? "md:flex-row-reverse md:text-right" : ""}`}>
           <div
             className="w-11 h-11 shrink-0 rounded-xl flex items-center justify-center"
-            style={{ backgroundColor: "#E3F0FB" }}
+            style={{ backgroundColor: "#E4F1FC" }}
           >
             <Icon d={step.icon} color={BLUE} className="w-6 h-6" />
           </div>
@@ -212,8 +213,8 @@ export default function WalmartRewardLander() {
         @keyframes cardShine { 0%, 55% { background-position: 135% 0; } 85%, 100% { background-position: -60% 0; } }
         .icon-bob { animation: iconBob 4.5s ease-in-out infinite; }
         @keyframes iconBob { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-5px) rotate(-5deg); } }
-        .cat-spark { position: absolute; top: 16px; right: 18px; color: #0071CE; animation: sparkTwinkle 3.4s ease-in-out infinite; }
-        @keyframes sparkTwinkle { 0%, 100% { transform: scale(.75) rotate(0deg); opacity: .15; } 50% { transform: scale(1.2) rotate(25deg); opacity: .45; } }
+        .cat-spark { position: absolute; top: 16px; right: 18px; color: ${YELLOW}; animation: sparkTwinkle 3.4s ease-in-out infinite; }
+        @keyframes sparkTwinkle { 0%, 100% { transform: scale(.75) rotate(0deg); opacity: .25; } 50% { transform: scale(1.2) rotate(25deg); opacity: .7; } }
 
         .faq-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s cubic-bezier(.16,1,.3,1); }
         .faq-body.open { grid-template-rows: 1fr; }
@@ -224,7 +225,7 @@ export default function WalmartRewardLander() {
 
         .t-card { transition: transform .25s cubic-bezier(.16,1,.3,1), border-color .25s ease, box-shadow .25s ease; }
         .t-card:hover { transform: translateY(-6px); border-color: rgba(0,113,206,.35); box-shadow: 0 18px 44px rgba(0,113,206,.12); }
-        .t-rail-fill { background: linear-gradient(180deg, #2A8CE8, #0071CE); }
+        .t-rail-fill { background: linear-gradient(180deg, ${BLUE_BRIGHT}, ${BLUE}); }
 
         .spark { position: absolute; bottom: -12px; border-radius: 9999px; background: rgba(255,255,255,.75); animation: sparkRise linear infinite; }
         @keyframes sparkRise {
@@ -243,10 +244,10 @@ export default function WalmartRewardLander() {
         className="relative overflow-hidden"
         style={{ background: `linear-gradient(170deg, ${BLUE_BRIGHT} 0%, ${BLUE} 45%, ${BLUE_DEEP} 100%)` }}
       >
-        <div className="orb w-96 h-96 -top-24 -left-24" style={{ backgroundColor: "#4FA3E8" }} />
+        <div className="orb w-96 h-96 -top-24 -left-24" style={{ backgroundColor: "#5AB3F0" }} />
         <div
           className="orb w-80 h-80 top-1/3 -right-20"
-          style={{ backgroundColor: "#003C87", animationDelay: "-6s" }}
+          style={{ backgroundColor: BLUE_DEEP, animationDelay: "-6s" }}
         />
         <div className="drifter left-[8%] top-[30%]">
           <Icon
@@ -272,7 +273,7 @@ export default function WalmartRewardLander() {
               <span className="w-2 h-2 rounded-full bg-green-400 pulse-dot" />
               Applications Open
             </span>
-            <h1 className="mt-6 font-black tracking-tight leading-[1.05] text-[clamp(1.95rem,9.2vw,2.6rem)] sm:text-5xl md:text-6xl lg:text-7xl text-balance">
+            <h1 className="mt-6 font-black tracking-tight leading-[1.05] text-[2.15rem] sm:text-5xl md:text-6xl lg:text-7xl text-balance">
               {"The Walmart Discounts They Don't Advertise"}
             </h1>
             <p className="mt-6 text-lg md:text-xl text-white/85 max-w-xl mx-auto leading-relaxed text-pretty">
@@ -358,7 +359,7 @@ export default function WalmartRewardLander() {
                 </span>
                 <div
                   className="cat-icon w-14 h-14 shrink-0 rounded-2xl flex items-center justify-center"
-                  style={{ backgroundColor: "#E3F0FB" }}
+                  style={{ backgroundColor: "#E4F1FC" }}
                 >
                   <div className="icon-bob" style={{ animationDelay: `${i * 0.6}s` }}>
                     <Icon d={c.icon} className="w-7 h-7" />
@@ -455,10 +456,10 @@ export default function WalmartRewardLander() {
             aria-hidden="true"
           />
         ))}
-        <div className="orb w-96 h-96 -top-24 -left-24" style={{ backgroundColor: "#66B1F0", opacity: 0.35 }} />
+        <div className="orb w-96 h-96 -top-24 -left-24" style={{ backgroundColor: "#7CC4F5", opacity: 0.35 }} />
         <div
           className="orb w-80 h-80 -bottom-24 -right-16"
-          style={{ backgroundColor: "#003C87", animationDelay: "-5s" }}
+          style={{ backgroundColor: BLUE_DEEP, animationDelay: "-5s" }}
         />
 
         <div className="relative mx-auto max-w-4xl px-6 py-20 md:py-28 text-center text-white">

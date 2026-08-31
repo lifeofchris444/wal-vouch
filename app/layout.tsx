@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1024,
         height: 1024,
-        alt: "A grocery bag of produce and snacks, a tablet, earbuds, an air fryer, a bedding set, toy building blocks, and a board game floating on a blue background",
+        alt: "A grocery bag of fresh produce, a flat-screen TV, wireless earbuds, an air fryer, a cookware set, and a building block set floating on a blue background",
       },
     ],
   },

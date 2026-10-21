@@ -10,10 +10,10 @@ const inter = Inter({
 })
 
 const SITE_URL = "https://www.walmartdiscounts.com"
-const SITE_NAME = "Walmart Discounts"
+const SITE_NAME = "Walmart Christmas Discounts"
 const TITLE = "The Walmart Discounts They Don't Advertise"
 const DESCRIPTION =
-  "Discover how shoppers are unlocking hidden discount codes on groceries, tech, home essentials, and everyday finds. Complete 5+ deals in five simple steps and get your discount delivered straight to your inbox."
+  "Discover how shoppers are unlocking hidden Walmart discounts this Christmas — on trees and decor, toys, electronics, and holiday lights. Complete 5+ deals in five simple steps and get your discount delivered straight to your inbox."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   keywords: [
     "Walmart discount code",
     "Walmart promo code",
-    "Walmart discounts",
-    "Walmart deals",
-    "Walmart rewards program",
-    "grocery and essentials deals",
-    "tech and electronics deals",
-    "home and kitchen deals",
-    "toys and games deals",
+    "Walmart Christmas sale",
+    "Walmart holiday discounts",
+    "Walmart Christmas trees",
+    "Walmart toy deals",
+    "Walmart electronics deals",
+    "Walmart holiday lights",
+    "Walmart Christmas gifts",
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1024,
         height: 1024,
-        alt: "A grocery bag of fresh produce, a flat-screen TV, wireless earbuds, an air fryer, a cookware set, and a building block set floating on a blue background",
+        alt: "Christmas flat-lay of a small decorated tree, wrapped gifts with red ribbons, a video game controller, a teddy bear, and string lights on a bright blue background",
       },
     ],
   },
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0071CE",
+  themeColor: "#0071DC",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
